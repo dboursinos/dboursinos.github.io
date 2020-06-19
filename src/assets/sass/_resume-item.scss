@@ -1,0 +1,70 @@
+section.resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  .resume-item {
+    .resume-content {}
+    .resume-date {
+      min-width: none;
+    }
+  }
+}
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+    .resume-item {
+      .resume-date {
+        min-width: 18rem;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+div.print-footer {
+  display: none;
+}
+
+@media only print {
+  div.print-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    & h5 {
+      text-align: center;
+      position: relative;
+      display: block;
+      border-top: 1px solid #d4d4d4;
+      width: 100%;
+      padding: .50rem;
+      margin: .75rem 0 .15rem 0;
+    }
+  }
+
+  section.resume-section {
+    margin: .75rem .5rem 1.5rem .5rem;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    min-height: 0rem;
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: auto; /* or 'auto' */
+    div.resume-item {
+      margin: .5rem 0 .5rem 0!important;
+      padding: .25rem 0 !important;
+      page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+      page-break-inside: avoid; /* or 'auto' */
+    }
+  }
+  
+  section#skills {
+    page-break-inside: avoid; /* or 'auto' */
+  }
+}

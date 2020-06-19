@@ -1,0 +1,28 @@
+.bg-primary,.btn-primary {
+  background-color: $primary !important;
+  border-color: darken($primary, 20%) !important;
+}
+.btn-primary:hover {
+  background-color: lighten($primary,15%) !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+a {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: lighten($primary, 15%);
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+}
